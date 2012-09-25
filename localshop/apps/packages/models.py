@@ -148,6 +148,9 @@ class ReleaseFile(models.Model):
     class Meta:
         unique_together = ('release', 'filetype', 'python_version', 'filename')
 
+    def __unicode__(self):
+        return "%s-%s" % ( self.release, self.filename)
+
     def get_absolute_url(self):
         url = reverse('packages:download', kwargs={
             'name': self.release.package.name,
