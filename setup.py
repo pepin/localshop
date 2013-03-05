@@ -15,6 +15,7 @@ install_requires = [
     'django-uuidfield==0.4.0',
     'django-storages==1.1.5',
     'django-configurations==0.1',
+    'django-kombu',
     'docutils==0.10',
     'eventlet==0.10.0',
     'gunicorn==0.17.1',
